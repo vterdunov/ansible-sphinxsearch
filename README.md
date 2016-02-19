@@ -1,6 +1,6 @@
 Sphinxsearch
 ============
-[![Build Status](https://travis-ci.org/vterdunov/ansible-sphinxseacrh.svg?branch=master)](https://travis-ci.org/vterdunov/ansible-sphinxseacrh)
+[![Build Status](https://travis-ci.org/vterdunov/ansible-sphinxsearch.svg?branch=master)](https://travis-ci.org/vterdunov/ansible-sphinxsearch)
 
 This role installs and configures the Sphinx search engine.
 
