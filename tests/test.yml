@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
+  remote_user: root
   become: yes
 
   roles:
-    - ansible-sphinx
+    - ansible-sphinxsearch
