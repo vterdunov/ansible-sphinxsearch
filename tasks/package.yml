@@ -1,0 +1,15 @@
+---
+- name: Ensure sphinx PPA is present
+  apt_repository:
+    repo: '{{ sphinx_ppa }}'
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: Install the sphinx package
+  apt:
+    name: '{{ item }}'
+    state: present
+    update_cache: yes
+  with_items:
+    - sphinxsearch
+  when: ansible_os_family == 'Debian'
