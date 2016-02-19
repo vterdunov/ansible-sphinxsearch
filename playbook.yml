@@ -5,11 +5,11 @@
   pre_tasks:
     - name: Create xml file for testing purpose
       copy:
-        src: test.xml
+        src: tests/test.xml
         dest: /tmp/test.xml
         owner: root
         group: root
         mode: 0644
 
   roles:
-    - role: sphinx
+    - role: ansible-sphinxsearch
