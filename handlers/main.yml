@@ -1,9 +1,4 @@
 ---
-- name: rotate all indexes
-  command: /usr/bin/indexer --rotate --all
-  ignore_errors: True
-  when: disable_sources == False
-
 - name: restart sphinx
   service:
     name: sphinxsearch

@@ -16,5 +16,9 @@
     group: root
     mode: 0644
   notify:
-    - rotate all indexes
     - restart sphinx
+
+- name: Rotate all indexes
+  command: /usr/bin/indexer --rotate --all
+  ignore_errors: True
+  when: sphinx_rotate_all
