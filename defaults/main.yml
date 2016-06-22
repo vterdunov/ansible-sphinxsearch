@@ -10,7 +10,6 @@ sphinx_searchd:
   read_timeout: 5
   max_children: 30
   pid_file: '/var/run/sphinxsearch/searchd.pid'
-  max_matches: 1000
   seamless_rotate: 1
   preopen_indexes: 1
   unlink_old: 1
@@ -18,20 +17,20 @@ sphinx_searchd:
   binlog_path: '/var/lib/sphinxsearch/data'
 
 sphinx_indexer:
-  mem_limit: '32M'
+  mem_limit: '64M'
 
-# Disable create source config
-disable_sources: False
+# Whether to rotate indexes or not
+sphinx_rotate_all: False
 
 # sources settings
 sphinx_sources:
-  - 'source test_source':
+  - 'test_source':
     - 'type = xmlpipe2'
     - 'xmlpipe_command = cat /tmp/test.xml'
 
 # indexes settings
 sphinx_indexes:
-  - index test_index:
+  - 'test_index':
     - 'source = test_source'
     - 'path = /var/lib/sphinxsearch/data/test_index'
     - 'charset_type = utf-8'

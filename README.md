@@ -23,7 +23,6 @@ sphinx_searchd:
   read_timeout: 5
   max_children: 30
   pid_file: '/var/run/sphinxsearch/searchd.pid'
-  max_matches: 1000
   seamless_rotate: 1
   preopen_indexes: 1
   unlink_old: 1
@@ -31,10 +30,7 @@ sphinx_searchd:
   binlog_path: '/var/lib/sphinxsearch/data'
 
 sphinx_indexer:
-  mem_limit: '32M'
-
-# Disable create source config
-disable_sources: False
+  mem_limit: '64M'
 
 # sources settings
 sphinx_sources:
