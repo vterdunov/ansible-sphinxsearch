@@ -1,6 +1,6 @@
 {% for index in sphinx_indexes %}
 {% for index_name, index_values in index.iteritems() %}
-{{ index_name }}
+index {{ index_name }}
 {
 {% for value in index_values %}
   {{ value }}

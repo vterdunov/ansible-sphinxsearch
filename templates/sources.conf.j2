@@ -1,6 +1,6 @@
 {% for source in sphinx_sources %}
 {% for source_name, source_values in source.iteritems() %}
-{{ source_name }}
+source {{ source_name }}
 {
 {% for value in source_values %}
   {{ value }}
